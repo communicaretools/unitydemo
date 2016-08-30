@@ -18,6 +18,7 @@ namespace Neighbourhood.Game.Player
 
 			Container.Bind<IPlayer>().To<PlayerBehaviour>().FromMethod(x => settings.Player);
 			Container.Bind<InputState>().AsSingle();
+			Container.Bind<ITickable>().To<KeyboardInput>().AsSingle();  // must be bound before PlayerMoveHandler
 			Container.Bind<ITickable>().To<PlayerMoveHandler>().AsSingle();
 		}
 

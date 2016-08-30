@@ -1,5 +1,6 @@
 ﻿using System;
 using Zenject;
+using Neighbourhood.Game.Abstractions;
 
 namespace Neighbourhood.Game.UnityIntegration
 {
@@ -7,7 +8,7 @@ namespace Neighbourhood.Game.UnityIntegration
 	{
 		public override void InstallBindings()
 		{
-			Container.BindAllInterfaces<UnityInput>().AsSingle();
+			Container.Bind<IInput>().To<UnityInput>().AsSingle();
 		}
 	}
 }
