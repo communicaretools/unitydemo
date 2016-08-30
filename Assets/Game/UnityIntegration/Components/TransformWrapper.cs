@@ -24,6 +24,11 @@ namespace Neighbourhood.Game.UnityIntegration.Components
 			get { return wrapped.forward; }
 		}
 
+		public Quaternion Rotation {
+			get { return wrapped.rotation; }
+			set { wrapped.rotation = value; }
+		}
+
 		#endregion
 	}
 }

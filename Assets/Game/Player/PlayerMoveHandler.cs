@@ -21,7 +21,10 @@ namespace Neighbourhood.Game.Player
 
 		public void Tick()
 		{
-			player.Transform.Position += player.Transform.Forward * settings.ForwardSpeed;
+			if (state.Direction == MovementDirection.Forward)
+			{
+				player.Transform.Position += player.Transform.Forward * settings.ForwardSpeed;
+			}
 		}
 
 		#endregion

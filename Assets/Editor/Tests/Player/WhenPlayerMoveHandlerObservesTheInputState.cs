@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using Neighbourhood.Game.Player;
+using UnityEngine;
 
 namespace Neighbourhood.Editor.Tests.Player
 {
@@ -20,6 +21,16 @@ namespace Neighbourhood.Editor.Tests.Player
 				RotationSpeed = 10f
 			};
 			handler = new PlayerMoveHandler(player, input, settings);
+		}
+
+		[Test]
+		public void AtRestNothingHappens()
+		{
+			input.Direction = MovementDirection.Still;
+			input.Rotation = RotationDirection.None;
+			handler.Tick();
+			Assert.That(player.Transform.Position, Is.EqualTo(new Vector3()));
+			Assert.That(player.Transform.Rotation, Is.EqualTo(Quaternion.identity));
 		}
 
 		[Test]

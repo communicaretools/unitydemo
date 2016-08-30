@@ -8,5 +8,6 @@ namespace Neighbourhood.Game.Abstractions.Components
 	{
 		Vector3 Position { get; set; }
 		Vector3 Forward { get; }
+		Quaternion Rotation { get; set; }
 	}
 }
