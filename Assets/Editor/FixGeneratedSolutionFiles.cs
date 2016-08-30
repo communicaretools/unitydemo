@@ -1,12 +1,4 @@
-﻿using UnityEngine;
-using UnityEditor;
-using System.IO;
-using System.Text.RegularExpressions;
-using System.Collections.Generic;
-using System.Collections;
-using System;
-
-/*
+﻿/*
 
 v2: Matt Rix pointed out there's an undocumented ONGeneratedCSProjectFiles() callback
 https://gist.github.com/MattRix/0bf8de88e16e8b494dbb
@@ -35,8 +27,7 @@ Matthew / Team Colorblind
 
 */
 
-
-using UnityEngine;
+using System;
 using UnityEditor;
 using System.IO;
 using System.Text.RegularExpressions;
