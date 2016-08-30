@@ -1,15 +1,37 @@
 ﻿using UnityEngine;
-using System.Collections;
+using Zenject;
+using Neighbourhood.Game.Inventory;
+using System;
 
-public class KeyBehaviour : MonoBehaviour {
+namespace Neighbourhood.Game.Houses
+{
+	[RequireComponent(typeof(Collider))]
+	public class KeyBehaviour : MonoBehaviour
+	{
+		Inventory.Inventory inventory;
+		public Settings KeyInfo;
 
-	// Use this for initialization
-	void Start () {
-	
+		[Inject]
+		public void Init(Inventory.Inventory inventory)
+		{
+			this.inventory = inventory;
+		}
+
+		void OnCollisionEnter(Collision collision)
+		{
+			if (collision.gameObject.CompareTag("MainCamera"))
+			{
+				inventory.Add(new Item(KeyInfo.Name, "key", KeyInfo.Data));
+				Destroy(this.gameObject);
+			}
+		}
+
+		[Serializable]
+		public class Settings
+		{
+			public string Name;
+			public KeyData Data;
+		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 }
