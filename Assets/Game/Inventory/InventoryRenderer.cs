@@ -19,7 +19,16 @@ namespace Neighbourhood.Game.Inventory
 		void OnGUI()
 		{
 			var bounds = new Rect(Positioning.LeftPadding, Screen.height - Positioning.BottomPadding, Positioning.Width, Positioning.Height);
-			GUI.Label(bounds, string.Format("Inventory: {0} items", inventory.Items.Count()));
+			GUI.Label(bounds, FormatInventory());
+		}
+
+		string FormatInventory()
+		{
+			if (!inventory.Items.Any() || inventory.Items.Count() > 10)
+			{
+				return string.Format("Inventory: {0} items", inventory.Items.Count());
+			}
+			return string.Format("Inventory: {0}", string.Join(", ", inventory.Items.Select(i => i.Name).ToArray()));
 		}
 
 		[Serializable]
