@@ -2,6 +2,7 @@
 using Zenject;
 using Neighbourhood.Game.Player;
 using Neighbourhood.Game.UnityIntegration;
+using Neighbourhood.Game.Inventory;
 
 namespace Neighbourhood.Game
 {
@@ -12,6 +13,7 @@ namespace Neighbourhood.Game
 		public override void InstallBindings()
 		{
 			PlayerInstaller.Install(Container, Settings.Player);
+			InventoryInstaller.Install(Container);
 			UnityIntegrationInstaller.Install(Container);
 		}
 
