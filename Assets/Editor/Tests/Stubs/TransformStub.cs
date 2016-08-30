@@ -9,14 +9,22 @@ namespace Neighbourhood.Editor.Tests.Stubs
 
 		public Vector3 Position { get; set; }
 		public Vector3 Forward { get; set; }
-		public Quaternion Rotation { get; set; }
+		public Vector3 Rotation { get; set; }
 
 		#endregion
 
 		public TransformStub()
 		{
 			Forward = Vector3.forward;
-			Rotation = Quaternion.identity;
+			Rotation = new Vector3();
+		}
+
+		public void Rotate(float x, float y, float z)
+		{
+			// no, it's not necessarily entirely correct
+			// or foolproof, but it reflects the intention
+			// in a unit test
+			Rotation += new Vector3(x, y, z);
 		}
 	}
 	

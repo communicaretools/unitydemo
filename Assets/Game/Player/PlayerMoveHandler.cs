@@ -1,5 +1,4 @@
 ﻿using Zenject;
-using UnityEngine;
 
 namespace Neighbourhood.Game.Player
 {
@@ -28,6 +27,14 @@ namespace Neighbourhood.Game.Player
 			else if (state.Direction == MovementDirection.Backward)
 			{
 				player.Transform.Position -= player.Transform.Forward * settings.ForwardSpeed;
+			}
+			if (state.Rotation == RotationDirection.Right)
+			{
+				player.Transform.Rotate(0f, settings.RotationSpeed, 0f);
+			}
+			else if (state.Rotation == RotationDirection.Left)
+			{
+				player.Transform.Rotate(0f, -settings.RotationSpeed, 0f);
 			}
 		}
 

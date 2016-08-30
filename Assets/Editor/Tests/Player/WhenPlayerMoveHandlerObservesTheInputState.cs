@@ -30,7 +30,7 @@ namespace Neighbourhood.Editor.Tests.Player
 			input.Rotation = RotationDirection.None;
 			handler.Tick();
 			Assert.That(player.Transform.Position, Is.EqualTo(new Vector3()));
-			Assert.That(player.Transform.Rotation, Is.EqualTo(Quaternion.identity));
+			Assert.That(player.Transform.Rotation, Is.EqualTo(new Vector3()));
 		}
 
 		[Test]
@@ -47,6 +47,22 @@ namespace Neighbourhood.Editor.Tests.Player
 			input.Direction = MovementDirection.Backward;
 			handler.Tick();
 			Assert.That(player.Transform.Position, Is.EqualTo(2 * -player.Transform.Forward));
+		}
+
+		[Test]
+		public void RightRotationRotatesPlayerTowardsTheRight()
+		{
+			input.Rotation = RotationDirection.Right;
+			handler.Tick();
+			Assert.That(player.Transform.Rotation.y, Is.EqualTo(10f));
+		}
+
+		[Test]
+		public void LeftRotationRotatesPlayerTowardsTheLeft()
+		{
+			input.Rotation = RotationDirection.Left;
+			handler.Tick();
+			Assert.That(player.Transform.Rotation.y, Is.EqualTo(-10f));
 		}
 	}
 }

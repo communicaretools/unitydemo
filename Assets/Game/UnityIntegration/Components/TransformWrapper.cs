@@ -1,5 +1,4 @@
-﻿using System;
-using Neighbourhood.Game.Abstractions.Components;
+﻿using Neighbourhood.Game.Abstractions.Components;
 using UnityEngine;
 
 namespace Neighbourhood.Game.UnityIntegration.Components
@@ -24,9 +23,9 @@ namespace Neighbourhood.Game.UnityIntegration.Components
 			get { return wrapped.forward; }
 		}
 
-		public Quaternion Rotation {
-			get { return wrapped.rotation; }
-			set { wrapped.rotation = value; }
+		public void Rotate(float x, float y, float z)
+		{
+			wrapped.Rotate(x, y, z);
 		}
 
 		#endregion

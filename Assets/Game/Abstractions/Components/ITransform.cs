@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace Neighbourhood.Game.Abstractions.Components
@@ -8,6 +7,7 @@ namespace Neighbourhood.Game.Abstractions.Components
 	{
 		Vector3 Position { get; set; }
 		Vector3 Forward { get; }
-		Quaternion Rotation { get; set; }
+
+		void Rotate(float x, float y, float z);
 	}
 }
