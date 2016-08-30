@@ -25,6 +25,10 @@ namespace Neighbourhood.Game.Player
 			{
 				player.Transform.Position += player.Transform.Forward * settings.ForwardSpeed;
 			}
+			else if (state.Direction == MovementDirection.Backward)
+			{
+				player.Transform.Position -= player.Transform.Forward * settings.ForwardSpeed;
+			}
 		}
 
 		#endregion

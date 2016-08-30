@@ -40,5 +40,13 @@ namespace Neighbourhood.Editor.Tests.Player
 			handler.Tick();
 			Assert.That(player.Transform.Position, Is.EqualTo(2 * player.Transform.Forward));
 		}
+
+		[Test]
+		public void BackwardsMovementMovesThePlayerBackwards()
+		{
+			input.Direction = MovementDirection.Backward;
+			handler.Tick();
+			Assert.That(player.Transform.Position, Is.EqualTo(2 * -player.Transform.Forward));
+		}
 	}
 }
