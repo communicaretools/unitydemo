@@ -5,6 +5,7 @@ using Neighbourhood.Game.UnityIntegration;
 using Neighbourhood.Game.Inventory;
 using Neighbourhood.Game.Shoutbox;
 using Neighbourhood.Game.Levels;
+using Neighbourhood.Game.Houses;
 
 namespace Neighbourhood.Game
 {
@@ -16,6 +17,7 @@ namespace Neighbourhood.Game
 		{
 			PlayerInstaller.Install(Container, Settings.Player);
 			InventoryInstaller.Install(Container);
+			HouseInstaller.Install(Container);
 			ShoutboxInstaller.Install(Container);
 			LevelInstaller.Install(Container);
 			UnityIntegrationInstaller.Install(Container);

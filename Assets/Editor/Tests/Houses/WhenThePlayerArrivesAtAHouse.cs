@@ -30,7 +30,7 @@ namespace Neighbourhood.Editor.Tests.Houses
 		[Test]
 		public void AMessageToTheUserIsDispatched()
 		{
-			Assert.That(string.IsNullOrWhiteSpace(dispatchedMessage), Is.False);
+			Assert.That(string.IsNullOrEmpty(dispatchedMessage), Is.False);
 		}
 	}
 

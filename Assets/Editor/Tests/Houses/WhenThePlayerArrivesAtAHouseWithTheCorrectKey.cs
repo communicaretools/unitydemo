@@ -38,7 +38,7 @@ namespace Neighbourhood.Editor.Tests.Houses
 		[Test]
 		public void NoMessageToTheUserIsDispatched()
 		{
-			Assert.That(string.IsNullOrWhiteSpace(dispatchedMessage), Is.True);
+			Assert.That(string.IsNullOrEmpty(dispatchedMessage), Is.True);
 		}
 
 		[Test]
