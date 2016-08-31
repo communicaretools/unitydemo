@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Neighbourhood.Game.Inventory
 {
@@ -18,6 +19,11 @@ namespace Neighbourhood.Game.Inventory
 		{
 			items.Add(item);
 			trigger.Fire(item);
+		}
+
+		public IEnumerable<T> GetItemDataOfType<T>()
+		{
+			return items.Where(i => i.Data is T).Select(i => (T)i.Data);
 		}
 	}
 

@@ -1,4 +1,6 @@
 ﻿using System;
+using Neighbourhood.Game.Shoutbox;
+using Neighbourhood.Game.Levels;
 
 namespace Neighbourhood.Game.Houses
 {
@@ -7,9 +9,13 @@ namespace Neighbourhood.Game.Houses
 		House house;
 		readonly HouseRegistry registry;
 		readonly Inventory.Inventory inventory;
+		readonly ShowMessageCommand showMessage;
+		readonly LoadLevelCommand loadLevel;
 
-		public HouseController(HouseRegistry registry, Inventory.Inventory inventory)
+		public HouseController(HouseRegistry registry, Inventory.Inventory inventory, ShowMessageCommand showMessage, LoadLevelCommand loadLevel)
 		{
+			this.loadLevel = loadLevel;
+			this.showMessage = showMessage;
 			this.inventory = inventory;
 			this.registry = registry;
 		}
@@ -22,7 +28,26 @@ namespace Neighbourhood.Game.Houses
 
 		public void PlayerArrived()
 		{
-			throw new NotImplementedException();
+			var couldUnlock = TryToUnlock();
+			if (!couldUnlock)
+			{
+				showMessage.Execute("You don't have the correct key to unlock this house");
+				return;
+			}
+			loadLevel.Execute(house.LevelToLoad);
+		}
+
+		bool TryToUnlock()
+		{
+			foreach (var key in inventory.GetItemDataOfType<Key>())
+			{
+				if (house.AttemptToUnlock(key))
+				{
+					return true;
+				}
+			}
+
+			return false;
 		}
 	}
 

@@ -7,5 +7,6 @@ namespace Neighbourhood.Game.Houses
 	public class HouseData
 	{
 		public string RequiredKeyCode;
+		public string LoadLevel;
 	}
 }

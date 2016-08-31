@@ -18,7 +18,7 @@ namespace Neighbourhood.Editor.Tests.Inventory
 			var trigger = new InventoryItemAddedSignal.Trigger();
 			trigger.SetupSignalListenerForTesting<InventoryItemAddedSignal, Item>(item => signalledItem = item);
 			inventory = new Game.Inventory.Inventory(trigger);
-			inventory.Add(new Item("test", "key", new {keyCode = 42}));
+			inventory.Add(new Item("test", "key", new TestData {Code = 42}));
 		}
 
 		[Test]
@@ -32,6 +32,17 @@ namespace Neighbourhood.Editor.Tests.Inventory
 		{
 			Assert.That(signalledItem, Is.Not.Null);
 			Assert.That(signalledItem.Name, Is.EqualTo("test"));
+		}
+
+		[Test]
+		public void TheDataAddedCanBeRetrievedByType()
+		{
+			Assert.That(inventory.GetItemDataOfType<TestData>().Single().Code, Is.EqualTo(42));
+		}
+
+		class TestData
+		{
+			public int Code { get; set; }
 		}
 	}
 }
