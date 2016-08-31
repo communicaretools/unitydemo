@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Neighbourhood.Game.Shoutbox
+namespace Neighbourhood.Game.FlashMessages
 {
 	public class ShowMessageHandler
 	{

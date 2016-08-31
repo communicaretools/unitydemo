@@ -1,5 +1,5 @@
 ﻿using System;
-using Neighbourhood.Game.Shoutbox;
+using Neighbourhood.Game.FlashMessages;
 using Neighbourhood.Game.Levels;
 
 namespace Neighbourhood.Game.Houses

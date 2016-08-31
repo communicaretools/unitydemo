@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 using Neighbourhood.Game.Houses;
-using Neighbourhood.Game.Shoutbox;
+using Neighbourhood.Game.FlashMessages;
 using Neighbourhood.Game.Levels;
 
 namespace Neighbourhood.Editor.Tests.Houses

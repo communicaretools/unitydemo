@@ -1,8 +1,8 @@
 ﻿using Zenject;
 
-namespace Neighbourhood.Game.Shoutbox
+namespace Neighbourhood.Game.FlashMessages
 {
-	public class ShoutboxInstaller : Installer<ShoutboxInstaller>
+	public class FlashMessagesInstaller : Installer<FlashMessagesInstaller>
 	{
 		public override void InstallBindings()
 		{
