@@ -21,7 +21,7 @@ namespace Neighbourhood.Editor.Tests.Houses
 			var trigger = new InventoryItemAddedSignal.Trigger();
 			trigger.SetupSignalListenerForTesting<InventoryItemAddedSignal, Item>(item => {});
 			var inventory = new Game.Inventory.Inventory(trigger);
-			inventory.Add(new Item("Green key", "key", new Key {Code = "KEY_GREEN"}));
+			inventory.Add(new Item("Green key", new Key {Code = "KEY_GREEN"}));
 
 			var showMessageCommand = new ShowMessageCommand();
 			dispatchedMessage = null;

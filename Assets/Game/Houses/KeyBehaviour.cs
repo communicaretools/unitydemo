@@ -21,7 +21,7 @@ namespace Neighbourhood.Game.Houses
 		{
 			if (collision.gameObject.CompareTag("MainCamera"))
 			{
-				inventory.Add(new Item(KeyInfo.Name, "key", KeyInfo.Data));
+				inventory.Add(new Item(KeyInfo.Name, KeyInfo.Data));
 				Destroy(this.gameObject);
 			}
 		}
