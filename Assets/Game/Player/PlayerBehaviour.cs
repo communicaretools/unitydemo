@@ -7,7 +7,7 @@ using Neighbourhood.Game.UnityIntegration;
 
 namespace Neighbourhood.Game.Player
 {
-	public interface IPlayer : IHasTransform, IHasRigidbody
+	public interface IPlayer : IHasTransform
 	{
 	}
 
