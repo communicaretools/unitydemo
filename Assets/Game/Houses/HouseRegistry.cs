@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Neighbourhood.Game.Houses
 {
@@ -8,9 +7,9 @@ namespace Neighbourhood.Game.Houses
 		readonly IList<House> houses = new List<House>();
 		public IEnumerable<House> Houses { get { return houses; } }
 
-		public void AddHouse()
+		public void AddHouse(House toAdd)
 		{
-			throw new NotImplementedException();
+			houses.Add(toAdd);
 		}
 	}
 }

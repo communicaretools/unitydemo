@@ -4,11 +4,12 @@ namespace Neighbourhood.Game.Houses
 {
 	public class House
 	{
+		private string requiredKey;
 		public bool IsUnlocked { get; private set; }
 
 		public House(HouseData data)
 		{
-			throw new NotImplementedException();
+			this.requiredKey = requiredKey;
 		}
 
 		public bool AttemptToUnlock(Key key)
