@@ -9,6 +9,7 @@ namespace Neighbourhood.Game.Inventory
 			Container.Bind<Inventory>().ToSelf().AsSingle();
 			Container.BindSignal<InventoryItemAddedSignal>();
 			Container.BindTrigger<InventoryItemAddedSignal.Trigger>();
+			Container.BindAllInterfaces<ShowMessageOnInventoryItemAdded>().To<ShowMessageOnInventoryItemAdded>().AsSingle();
 		}
 	}
 }
