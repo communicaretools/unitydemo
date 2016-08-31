@@ -1,15 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Zenject;
 
-public class HouseBehaviour : MonoBehaviour {
+namespace Neighbourhood.Game.Houses
+{
+	[RequireComponent(typeof(Collider))]
+	public class HouseBehaviour : MonoBehaviour
+	{
+		HouseController controller;
+		public HouseData House;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+		[Inject]
+		public void Init(HouseController controller)
+		{
+			this.controller = controller;
+			controller.Initialize(this.House);
+		}
+		
+		void OnCollisionEnter(Collision collision)
+		{
+			if (collision.gameObject.CompareTag("MainCamera"))
+			{
+				controller.PlayerArrived();
+			}
+		}
 	}
 }

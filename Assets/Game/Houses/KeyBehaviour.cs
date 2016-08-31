@@ -30,7 +30,7 @@ namespace Neighbourhood.Game.Houses
 		public class Settings
 		{
 			public string Name;
-			public KeyData Data;
+			public Key Data;
 		}
 	}
 
