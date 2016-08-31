@@ -3,6 +3,8 @@ using Zenject;
 using Neighbourhood.Game.Player;
 using Neighbourhood.Game.UnityIntegration;
 using Neighbourhood.Game.Inventory;
+using Neighbourhood.Game.Shoutbox;
+using Neighbourhood.Game.Levels;
 
 namespace Neighbourhood.Game
 {
@@ -14,6 +16,8 @@ namespace Neighbourhood.Game
 		{
 			PlayerInstaller.Install(Container, Settings.Player);
 			InventoryInstaller.Install(Container);
+			ShoutboxInstaller.Install(Container);
+			LevelInstaller.Install(Container);
 			UnityIntegrationInstaller.Install(Container);
 		}
 
