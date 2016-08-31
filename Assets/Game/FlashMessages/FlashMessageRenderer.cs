@@ -1,15 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Zenject;
 
-public class FlashMessageRenderer : MonoBehaviour {
+namespace Neighbourhood.Game.FlashMessages
+{
+	public class FlashMessageRenderer : MonoBehaviour
+	{
+		FlashMessageStore messageStore;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+		[Inject]
+		void Init(FlashMessageStore store)
+		{
+			messageStore = store;
+		}
+
+		void OnGUI()
+		{
+			var message = messageStore.GetLatestMessage(Time.realtimeSinceStartup);
+			if (message == null)
+			{
+				return;
+			}
+
+			var width = Screen.width / 2f;
+			var height = Screen.height / 2f;
+			GUI.Box(new Rect(width - width/2f, height - height/2f, width, height), "Message:");
+			GUI.Label(new Rect(0, 0, width, height), message);
+		}
 	}
 }

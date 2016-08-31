@@ -18,7 +18,7 @@ namespace Neighbourhood.Game
 			PlayerInstaller.Install(Container, Settings.Player);
 			InventoryInstaller.Install(Container);
 			HouseInstaller.Install(Container);
-			FlashMessagesInstaller.Install(Container);
+			FlashMessagesInstaller.Install(Container, Settings.FlashMessages);
 			LevelInstaller.Install(Container);
 			UnityIntegrationInstaller.Install(Container);
 		}
@@ -27,6 +27,7 @@ namespace Neighbourhood.Game
 		public class GameSettings
 		{
 			public PlayerSettings Player;
+			public FlashMessageSettings FlashMessages;
 		}
 	}
 }
