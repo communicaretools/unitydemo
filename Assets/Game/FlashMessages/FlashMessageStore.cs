@@ -28,7 +28,7 @@ namespace Neighbourhood.Game.FlashMessages
 				startTime = time;
 				newMessage = false;
 			}
-			else if (time > startTime + settings.TimeoutInSeconds)
+			else if (time > startTime + settings.TimeoutInSeconds && message != null)
 			{
 				Debug.Log("FlashMessageStore: Flash message: `" + message + "' timed out");
 				message = null;

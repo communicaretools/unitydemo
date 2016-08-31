@@ -2,6 +2,7 @@
 
 namespace Neighbourhood.Game.FlashMessages
 {
+	[Serializable]
 	public class FlashMessageSettings
 	{
 		public float TimeoutInSeconds;

@@ -23,9 +23,10 @@ namespace Neighbourhood.Game.FlashMessages
 			}
 
 			var width = Screen.width / 2f;
-			var height = Screen.height / 2f;
-			GUI.Box(new Rect(width - width/2f, height - height/2f, width, height), "Message:");
-			GUI.Label(new Rect(0, 0, width, height), message);
+			var height = Screen.height / 4f;
+			var boxBounds = new Rect(width - width / 2f, height - height / 2f, width, height);
+			GUI.Box(boxBounds, "Message:");
+			GUI.Label(new Rect(boxBounds.x + 30f, boxBounds.y + 70f, width - 30f, height - 70f), message);
 		}
 	}
 }
