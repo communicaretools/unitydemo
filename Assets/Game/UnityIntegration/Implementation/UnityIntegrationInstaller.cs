@@ -1,8 +1,8 @@
 ﻿using System;
 using Zenject;
-using Neighbourhood.Game.Abstractions;
+using Neighbourhood.Game.UnityIntegration.Abstractions;
 
-namespace Neighbourhood.Game.UnityIntegration
+namespace Neighbourhood.Game.UnityIntegration.Implementation
 {
 	public class UnityIntegrationInstaller : Installer<UnityIntegrationInstaller>
 	{

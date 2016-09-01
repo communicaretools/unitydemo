@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Neighbourhood.Game.Abstractions.Components;
+using Neighbourhood.Game.UnityIntegration.Abstractions.Components;
 using Zenject;
-using Neighbourhood.Game.UnityIntegration.Components;
-using Neighbourhood.Game.UnityIntegration;
+using Neighbourhood.Game.UnityIntegration.Implementation.Components;
+using Neighbourhood.Game.UnityIntegration.Implementation;
 
 namespace Neighbourhood.Game.Player
 {

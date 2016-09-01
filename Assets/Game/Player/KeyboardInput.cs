@@ -1,5 +1,5 @@
 ﻿using Zenject;
-using Neighbourhood.Game.Abstractions;
+using Neighbourhood.Game.UnityIntegration.Abstractions;
 
 namespace Neighbourhood.Game.Player
 {

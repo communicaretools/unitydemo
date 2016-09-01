@@ -1,8 +1,8 @@
 ﻿using System;
-using Neighbourhood.Game.Abstractions;
+using Neighbourhood.Game.UnityIntegration.Abstractions;
 using UnityEngine;
 
-namespace Neighbourhood.Game.UnityIntegration
+namespace Neighbourhood.Game.UnityIntegration.Implementation
 {
 	public class UnityInput : IInput
 	{

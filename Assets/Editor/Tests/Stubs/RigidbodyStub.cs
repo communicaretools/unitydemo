@@ -1,5 +1,5 @@
 using System;
-using Neighbourhood.Game.Abstractions.Components;
+using Neighbourhood.Game.UnityIntegration.Abstractions.Components;
 using UnityEngine;
 
 namespace Neighbourhood.Editor.Tests.Stubs

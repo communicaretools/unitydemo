@@ -1,8 +1,8 @@
 ﻿using System;
 using UnityEngine;
-using Neighbourhood.Game.Abstractions.Components;
+using Neighbourhood.Game.UnityIntegration.Abstractions.Components;
 
-namespace Neighbourhood.Game.UnityIntegration.Components
+namespace Neighbourhood.Game.UnityIntegration.Implementation.Components
 {
 	public class RigidbodyWrapper : IRigidbody
 	{

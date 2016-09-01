@@ -1,7 +1,7 @@
-﻿using Neighbourhood.Game.Abstractions.Components;
+﻿using Neighbourhood.Game.UnityIntegration.Abstractions.Components;
 using UnityEngine;
 
-namespace Neighbourhood.Game.UnityIntegration.Components
+namespace Neighbourhood.Game.UnityIntegration.Implementation.Components
 {
 	public class TransformWrapper : ITransform
 	{

@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Neighbourhood.Game.Abstractions.Components
+namespace Neighbourhood.Game.UnityIntegration.Abstractions.Components
 {
 	public interface IHasTransform
 	{

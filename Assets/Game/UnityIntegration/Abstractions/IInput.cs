@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Neighbourhood.Game.Abstractions
+namespace Neighbourhood.Game.UnityIntegration.Abstractions
 {
 	public interface IInput
 	{

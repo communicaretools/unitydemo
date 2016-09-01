@@ -1,7 +1,7 @@
 ﻿using System;
 using Zenject;
 using Neighbourhood.Game.Player;
-using Neighbourhood.Game.UnityIntegration;
+using Neighbourhood.Game.UnityIntegration.Implementation;
 using Neighbourhood.Game.Inventory;
 using Neighbourhood.Game.FlashMessages;
 using Neighbourhood.Game.Levels;

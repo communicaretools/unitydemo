@@ -1,4 +1,4 @@
-using Neighbourhood.Game.Abstractions.Components;
+using Neighbourhood.Game.UnityIntegration.Abstractions.Components;
 
 namespace Neighbourhood.Editor.Tests.Stubs
 {

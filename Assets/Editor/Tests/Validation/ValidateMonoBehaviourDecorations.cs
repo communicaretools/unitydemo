@@ -5,8 +5,8 @@ using UnityEngine;
 using System.Linq;
 using System.Reflection;
 using Neighbourhood.Game;
-using Neighbourhood.Game.Abstractions;
-using Neighbourhood.Game.Abstractions.Components;
+using Neighbourhood.Game.UnityIntegration.Abstractions;
+using Neighbourhood.Game.UnityIntegration.Abstractions.Components;
 
 namespace Neighbourhood.Editor.Tests.Validation
 {
