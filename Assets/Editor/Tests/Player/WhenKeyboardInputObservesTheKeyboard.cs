@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 using Neighbourhood.Editor.Tests.Stubs;
-using Neighbourhood.Game.Player;
+using Neighbourhood.Game.FirstPersonPlayer;
 
 namespace Neighbourhood.Editor.Tests.Player
 {

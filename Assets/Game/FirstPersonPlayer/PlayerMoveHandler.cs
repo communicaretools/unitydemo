@@ -1,6 +1,6 @@
 ﻿using Zenject;
 
-namespace Neighbourhood.Game.Player
+namespace Neighbourhood.Game.FirstPersonPlayer
 {
 	public class PlayerMoveHandler : ITickable
 	{

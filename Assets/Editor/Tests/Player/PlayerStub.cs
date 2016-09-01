@@ -1,4 +1,4 @@
-using Neighbourhood.Game.Player;
+using Neighbourhood.Game.FirstPersonPlayer;
 using Neighbourhood.Editor.Tests.Stubs;
 
 namespace Neighbourhood.Editor.Tests.Player

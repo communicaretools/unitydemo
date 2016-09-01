@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using Neighbourhood.Game.Player;
+using Neighbourhood.Game.FirstPersonPlayer;
 using UnityEngine;
 
 namespace Neighbourhood.Editor.Tests.Player

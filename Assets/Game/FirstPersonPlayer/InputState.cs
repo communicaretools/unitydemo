@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Neighbourhood.Game.Player
+namespace Neighbourhood.Game.FirstPersonPlayer
 {
 	public enum MovementDirection
 	{

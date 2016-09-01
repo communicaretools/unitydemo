@@ -5,7 +5,7 @@ using Zenject;
 using Neighbourhood.Game.UnityIntegration.Implementation.Components;
 using Neighbourhood.Game.UnityIntegration.Implementation;
 
-namespace Neighbourhood.Game.Player
+namespace Neighbourhood.Game.FirstPersonPlayer
 {
 	public interface IPlayer : IHasTransform
 	{
