@@ -16,6 +16,7 @@ namespace Neighbourhood.Game.FlashMessages
 			Container.Bind<FlashMessageSettings>().ToSelf().FromInstance(settings);
 			Container.Bind<FlashMessageStore>().ToSelf().AsSingle();
 			Container.BindCommand<ShowMessageCommand, string>().To<FlashMessageStore>(x => x.HandleShowMessage).AsSingle();
+			Container.Bind<FlashMessageRenderer>().ToSelf().FromGameObject().AsSingle().NonLazy();
 		}
 	}
 }

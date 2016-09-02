@@ -8,17 +8,18 @@ namespace Neighbourhood.Game.Inventory
 	public class InventoryRenderer : MonoBehaviour
 	{
 		Inventory inventory;
-		public Settings Positioning;
+		Settings positioning;
 
 		[Inject]
-		public void Init(Inventory inventory)
+		public void Init(Inventory inventory, Settings settings)
 		{
 			this.inventory = inventory;
+			this.positioning = settings;
 		}
 
 		void OnGUI()
 		{
-			var bounds = new Rect(Positioning.LeftPadding, Screen.height - Positioning.BottomPadding, Positioning.Width, Positioning.Height);
+			var bounds = new Rect(positioning.LeftPadding, Screen.height - positioning.BottomPadding, positioning.Width, positioning.Height);
 			GUI.Label(bounds, FormatInventory());
 		}
 

@@ -16,7 +16,7 @@ namespace Neighbourhood.Game
 		{
 			FirstPersonPlayer.PlayerInstaller.Install(Container, Settings.Player);
 			ThirdPersonPlayer.PlayerInstaller.Install(Container);
-			InventoryInstaller.Install(Container);
+			InventoryInstaller.Install(Container, Settings.Inventory);
 			HouseInstaller.Install(Container);
 			FlashMessagesInstaller.Install(Container, Settings.FlashMessages);
 			LevelInstaller.Install(Container);
@@ -28,6 +28,7 @@ namespace Neighbourhood.Game
 		{
 			public FirstPersonPlayer.PlayerSettings Player;
 			public FlashMessageSettings FlashMessages;
+			public InventoryInstaller.InventorySettings Inventory;
 		}
 	}
 }
