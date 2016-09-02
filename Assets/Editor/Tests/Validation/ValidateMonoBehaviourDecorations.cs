@@ -18,10 +18,12 @@ namespace Neighbourhood.Editor.Tests.Validation
 		// annotation
 		IDictionary<Type, Type> ifaceToComponent = new Dictionary<Type, Type>
 		{
-			{typeof(IHasRigidbody), typeof(Rigidbody)}
+			{typeof(IHasRigidbody), typeof(Rigidbody)},
+			{typeof(IHasAnimator), typeof(Animator)},
+			{typeof(IHasNavMeshAgent), typeof(NavMeshAgent)}
 		};
 		/// <summary>
-		/// Relationships between cerain message handlers and Unity Components:
+		/// Relationships between certain message handlers and Unity Components:
 		/// Require that the given behaviour has the corresponding RequireComponent(type)
 		/// annotation
 		/// </summary>

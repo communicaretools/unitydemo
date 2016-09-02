@@ -1,6 +1,5 @@
 ﻿using System;
 using Zenject;
-using Neighbourhood.Game.FirstPersonPlayer;
 using Neighbourhood.Game.UnityIntegration.Implementation;
 using Neighbourhood.Game.Inventory;
 using Neighbourhood.Game.FlashMessages;
@@ -15,7 +14,8 @@ namespace Neighbourhood.Game
 
 		public override void InstallBindings()
 		{
-			PlayerInstaller.Install(Container, Settings.Player);
+			FirstPersonPlayer.PlayerInstaller.Install(Container, Settings.Player);
+			ThirdPersonPlayer.PlayerInstaller.Install(Container);
 			InventoryInstaller.Install(Container);
 			HouseInstaller.Install(Container);
 			FlashMessagesInstaller.Install(Container, Settings.FlashMessages);
@@ -26,7 +26,7 @@ namespace Neighbourhood.Game
 		[Serializable]
 		public class GameSettings
 		{
-			public PlayerSettings Player;
+			public FirstPersonPlayer.PlayerSettings Player;
 			public FlashMessageSettings FlashMessages;
 		}
 	}

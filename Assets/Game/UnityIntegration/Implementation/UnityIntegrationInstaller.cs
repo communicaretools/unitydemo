@@ -9,6 +9,7 @@ namespace Neighbourhood.Game.UnityIntegration.Implementation
 		public override void InstallBindings()
 		{
 			Container.Bind<IInput>().To<UnityInput>().AsSingle();
+			Container.Bind<ICoordinateUtility>().To<UnityCoordinateUtility>().AsSingle();
 		}
 	}
 }

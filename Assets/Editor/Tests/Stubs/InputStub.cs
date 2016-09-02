@@ -1,4 +1,5 @@
 ﻿using Neighbourhood.Game.UnityIntegration.Abstractions;
+using UnityEngine;
 
 namespace Neighbourhood.Editor.Tests.Stubs
 {
@@ -6,9 +7,9 @@ namespace Neighbourhood.Editor.Tests.Stubs
 	{
 		public float Horizontal { get; set; }
 		public float Vertical { get; set; }
+		public Vector2 SelectedPoint { get;set; }
 
 		#region IInput implementation
-
 		public float GetHorizontal()
 		{
 			return Horizontal;
@@ -19,6 +20,10 @@ namespace Neighbourhood.Editor.Tests.Stubs
 			return Vertical;
 		}
 
+		public Vector2 GetSelectedPoint()
+		{
+			return SelectedPoint;
+		}
 		#endregion
 	}
 }

@@ -15,6 +15,19 @@ namespace Neighbourhood.Game.UnityIntegration.Implementation
 		{
 			return Input.GetAxis("Vertical");
 		}
+
+		public Vector2 GetSelectedPoint()
+		{
+			if (Input.touchCount > 0)
+			{
+				return Input.GetTouch(0).position;
+			}
+			else if (Input.mousePresent && Input.GetMouseButtonDown(0))
+			{
+				return Input.mousePosition;
+			}
+			return Vector2.zero;
+		}
 	}
 }
 
