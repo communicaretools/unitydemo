@@ -5,7 +5,7 @@ using Zenject;
 
 namespace Neighbourhood.Game.Indoors.ThirdPersonPlayer
 {
-	[RequireComponent(typeof(Animator), typeof(NavMeshAgent))]
+	[RequireComponent(typeof(Animator), typeof(UnityEngine.AI.NavMeshAgent))]
 	public class ThirdPersonMovementBehaviour : MonoBehaviour, IPlayerMovementBehaviour
 	{
 		NavMeshAgentWrapper agent;
@@ -17,7 +17,7 @@ namespace Neighbourhood.Game.Indoors.ThirdPersonPlayer
 		[Inject]
 		public void Init(PlayerMovementController controller)
 		{
-			agent = new NavMeshAgentWrapper(GetComponent<NavMeshAgent>());
+			agent = new NavMeshAgentWrapper(GetComponent<UnityEngine.AI.NavMeshAgent>());
 			animator = new AnimatorWrapper(GetComponent<Animator>());
 			controller.Init(this);
 		}
