@@ -10,9 +10,9 @@ namespace Neighbourhood.Game.Outdoors.Houses
 		readonly HouseRegistry registry;
 		readonly Inventory.Inventory inventory;
 		readonly ShowMessageCommand showMessage;
-		readonly LoadLevelCommand loadLevel;
+		readonly EnterHouseCommand loadLevel;
 
-		public HouseController(HouseRegistry registry, Inventory.Inventory inventory, ShowMessageCommand showMessage, LoadLevelCommand loadLevel)
+		public HouseController(HouseRegistry registry, Inventory.Inventory inventory, ShowMessageCommand showMessage, EnterHouseCommand loadLevel)
 		{
 			this.loadLevel = loadLevel;
 			this.showMessage = showMessage;

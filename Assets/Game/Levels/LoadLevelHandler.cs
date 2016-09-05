@@ -1,13 +1,12 @@
-﻿using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine.SceneManagement;
 
 namespace Neighbourhood.Game.Levels
 {
 	public class LoadLevelHandler
 	{
-		public void Load(string name)
+		public void Enter(string houseName)
 		{
-			SceneManager.LoadScene(name);
+			SceneManager.LoadScene(houseName);
 		}
 	}
 }

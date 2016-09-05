@@ -6,7 +6,7 @@ namespace Neighbourhood.Game.Levels
 	{
 		public override void InstallBindings()
 		{
-			Container.BindCommand<LoadLevelCommand, string>().To<LoadLevelHandler>(handler => handler.Load);
+			Container.BindCommand<EnterHouseCommand, string>().To<LoadLevelHandler>(handler => handler.Enter);
 		}
 	}
 }

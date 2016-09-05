@@ -2,7 +2,7 @@
 
 namespace Neighbourhood.Game.Levels
 {
-	public class LoadLevelCommand : Command<string>
+	public class EnterHouseCommand : Command<string>
 	{
 	}
 }

@@ -26,7 +26,7 @@ namespace Neighbourhood.Editor.Tests.Houses
 			var showMessageCommand = new ShowMessageCommand();
 			dispatchedMessage = null;
 			showMessageCommand.Construct(msg => dispatchedMessage = msg);
-			var loadLevelCommand = new LoadLevelCommand();
+			var loadLevelCommand = new EnterHouseCommand();
 			requestedLevel = null;
 			loadLevelCommand.Construct(levelName => requestedLevel = levelName);
 
