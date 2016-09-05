@@ -1,6 +1,6 @@
 using System;
 
-namespace Neighbourhood.Game.Houses
+namespace Neighbourhood.Game.Outdoors.Houses
 {
 	[Serializable]
 	public class Key

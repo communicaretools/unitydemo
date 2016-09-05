@@ -3,7 +3,7 @@ using Neighbourhood.Game.UnityIntegration.Abstractions.Components;
 using Neighbourhood.Game.UnityIntegration.Implementation.Components;
 using Zenject;
 
-namespace Neighbourhood.Game.ThirdPersonPlayer
+namespace Neighbourhood.Game.Indoors.ThirdPersonPlayer
 {
 	[RequireComponent(typeof(Animator), typeof(NavMeshAgent))]
 	public class ThirdPersonMovementBehaviour : MonoBehaviour, IPlayerMovementBehaviour

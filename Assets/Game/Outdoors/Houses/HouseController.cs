@@ -2,7 +2,7 @@
 using Neighbourhood.Game.FlashMessages;
 using Neighbourhood.Game.Levels;
 
-namespace Neighbourhood.Game.Houses
+namespace Neighbourhood.Game.Outdoors.Houses
 {
 	public class HouseController
 	{

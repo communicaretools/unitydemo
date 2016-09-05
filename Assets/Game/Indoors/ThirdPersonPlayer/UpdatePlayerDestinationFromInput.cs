@@ -2,7 +2,7 @@
 using Zenject;
 using UnityEngine;
 
-namespace Neighbourhood.Game.ThirdPersonPlayer
+namespace Neighbourhood.Game.Indoors.ThirdPersonPlayer
 {
 	public class UpdatePlayerDestinationFromInput : ITickable
 	{

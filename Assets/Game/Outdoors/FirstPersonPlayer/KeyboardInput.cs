@@ -1,7 +1,7 @@
 ﻿using Zenject;
 using Neighbourhood.Game.UnityIntegration.Abstractions;
 
-namespace Neighbourhood.Game.FirstPersonPlayer
+namespace Neighbourhood.Game.Outdoors.FirstPersonPlayer
 {
 	public class KeyboardInput : ITickable
 	{

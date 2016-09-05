@@ -1,7 +1,7 @@
 ﻿using System;
 using Zenject;
 
-namespace Neighbourhood.Game.FirstPersonPlayer
+namespace Neighbourhood.Game.Outdoors.FirstPersonPlayer
 {
 	public class PlayerInstaller : Installer<PlayerSettings, PlayerInstaller>
 	{

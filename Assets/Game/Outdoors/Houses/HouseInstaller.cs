@@ -1,7 +1,7 @@
 ﻿using System;
 using Zenject;
 
-namespace Neighbourhood.Game.Houses
+namespace Neighbourhood.Game.Outdoors.Houses
 {
 	public class HouseInstaller : Installer<HouseInstaller>
 	{

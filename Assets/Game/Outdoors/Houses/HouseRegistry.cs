@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Neighbourhood.Game.Houses
+namespace Neighbourhood.Game.Outdoors.Houses
 {
 	public class HouseRegistry
 	{

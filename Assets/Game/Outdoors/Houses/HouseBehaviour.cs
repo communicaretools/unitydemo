@@ -2,7 +2,7 @@
 using System.Collections;
 using Zenject;
 
-namespace Neighbourhood.Game.Houses
+namespace Neighbourhood.Game.Outdoors.Houses
 {
 	[RequireComponent(typeof(Collider))]
 	public class HouseBehaviour : MonoBehaviour

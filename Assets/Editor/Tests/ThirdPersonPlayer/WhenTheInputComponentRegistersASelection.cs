@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using Neighbourhood.Editor.Tests.Stubs;
 using Neighbourhood.Editor.Tests.TestExtensions;
-using Neighbourhood.Game.ThirdPersonPlayer;
+using Neighbourhood.Game.Indoors.ThirdPersonPlayer;
 using UnityEngine;
 
 namespace Neighbourhood.Editor.Tests.ThirdPersonPlayer

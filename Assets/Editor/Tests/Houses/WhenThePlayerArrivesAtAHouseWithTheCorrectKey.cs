@@ -1,6 +1,6 @@
 using NUnit.Framework;
 using Neighbourhood.Editor.Tests.TestExtensions;
-using Neighbourhood.Game.Houses;
+using Neighbourhood.Game.Outdoors.Houses;
 using Neighbourhood.Game.FlashMessages;
 using Neighbourhood.Game.Levels;
 using Neighbourhood.Game.Inventory;

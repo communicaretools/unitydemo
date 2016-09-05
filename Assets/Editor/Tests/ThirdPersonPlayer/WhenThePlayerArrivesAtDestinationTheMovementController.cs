@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using Neighbourhood.Game.ThirdPersonPlayer;
+using Neighbourhood.Game.Indoors.ThirdPersonPlayer;
 using Zenject;
 using Neighbourhood.Editor.Tests.Stubs;
 using Neighbourhood.Editor.Tests.TestExtensions;

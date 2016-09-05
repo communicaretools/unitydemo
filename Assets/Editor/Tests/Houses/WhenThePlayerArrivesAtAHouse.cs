@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using Neighbourhood.Game.Houses;
+using Neighbourhood.Game.Outdoors.Houses;
 using Neighbourhood.Game.FlashMessages;
 using Neighbourhood.Game.Levels;
 

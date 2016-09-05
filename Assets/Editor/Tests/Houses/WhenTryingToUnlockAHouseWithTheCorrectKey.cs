@@ -1,6 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
-using Neighbourhood.Game.Houses;
+using Neighbourhood.Game.Outdoors.Houses;
 
 namespace Neighbourhood.Editor.Tests.Houses
 {

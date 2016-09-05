@@ -3,7 +3,7 @@ using Zenject;
 using Neighbourhood.Game.Inventory;
 using System;
 
-namespace Neighbourhood.Game.Houses
+namespace Neighbourhood.Game.Outdoors.Houses
 {
 	[RequireComponent(typeof(Collider))]
 	public class KeyBehaviour : MonoBehaviour
