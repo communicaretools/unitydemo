@@ -8363,8 +8363,8 @@ MonoBehaviour:
     Player:
       Player: {fileID: 1125402719}
       MovementSettings:
-        ForwardSpeed: 1.5
-        RotationSpeed: 15
+        ForwardSpeed: 0.7
+        RotationSpeed: 5
 --- !u!4 &805868260
 Transform:
   m_ObjectHideFlags: 0

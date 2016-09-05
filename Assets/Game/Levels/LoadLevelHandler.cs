@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Neighbourhood.Game.Levels
 {
@@ -6,7 +7,7 @@ namespace Neighbourhood.Game.Levels
 	{
 		public void Load(string name)
 		{
-			Debug.Log("Now I'm supposed to load a level named " + name);
+			SceneManager.LoadScene(name);
 		}
 	}
 }
