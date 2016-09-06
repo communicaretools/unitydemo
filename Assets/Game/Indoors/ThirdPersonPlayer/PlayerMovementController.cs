@@ -30,7 +30,7 @@ namespace Neighbourhood.Game.Indoors.ThirdPersonPlayer
 
 		void GoTowards(PlayerDestinationChangedSignal.Arguments @event)
 		{
-			navigator.GoTowards(@event.Destination);
+			navigator.GoTowards(@event.Coordinate);
 			animator.SetBool("Walking", true);
 			navigating = NavigationState.Starting;
 		}

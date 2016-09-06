@@ -22,7 +22,7 @@ namespace Neighbourhood.Editor.Tests.ThirdPersonPlayer
 
 			behaviour = new PlayerMovementBehaviourStub();
 			controller.Init(behaviour);
-			leavingSignal.SimulateTrigger(new PlayerDestinationChangedSignal.Arguments {Destination = new Vector3(1f, 2f, 3f)});
+			leavingSignal.SimulateTrigger(new PlayerDestinationChangedSignal.Arguments {Coordinate = new Vector3(1f, 2f, 3f)});
 		}
 
 		[Test]

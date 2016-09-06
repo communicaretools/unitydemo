@@ -390,6 +390,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.028249692, y: 0.052881226, z: 0.024877334}
   m_Center: {x: -0.00010901224, y: -0.000111312605, z: 0.00031895563}
+--- !u!114 &316846572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 316846569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fadd10dff77f340f1a09e1286e8dd916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings:
+    Name: Fridge
 --- !u!1001 &386468767
 Prefab:
   m_ObjectHideFlags: 0

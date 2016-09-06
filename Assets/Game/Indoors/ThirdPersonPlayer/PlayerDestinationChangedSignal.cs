@@ -9,8 +9,8 @@ namespace Neighbourhood.Game.Indoors.ThirdPersonPlayer
 
 		public class Arguments
 		{
-			public object Sender { get; set; }
-			public Vector3 Destination { get; set; }
+			public IPlayerDestination Destination { get; set; }
+			public Vector3 Coordinate { get; set; }
 		}
 	}
 }

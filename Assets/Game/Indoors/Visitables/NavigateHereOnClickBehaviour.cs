@@ -4,14 +4,14 @@ using Neighbourhood.Game.Indoors.ThirdPersonPlayer;
 
 namespace Neighbourhood.Game.Indoors.Visitables
 {
-	[RequireComponent(typeof(Collider))]
+	[RequireComponent(typeof(Collider), typeof(VisitableItemBehaviour))]
 	public class NavigateHereOnClickBehaviour : MonoBehaviour
 	{
 		[Inject] PlayerDestinationChangedSignal.Trigger ScheduleNavigation { get; set; }
 
 		void OnMouseUpAsButton()
 		{
-			ScheduleNavigation.Fire(new PlayerDestinationChangedSignal.Arguments {Sender = gameObject, Destination = transform.position});
+			ScheduleNavigation.Fire(new PlayerDestinationChangedSignal.Arguments {Destination = GetComponent<IVisitableItem>(), Coordinate = transform.position});
 		}
 	}
 }
