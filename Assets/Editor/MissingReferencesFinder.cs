@@ -32,10 +32,16 @@ public class MissingReferencesFinder : MonoBehaviour
 	[MenuItem(MENU_ROOT + "Search in all scenes", false, 51)]
 	public static void MissingSpritesInAllScenes()
 	{
+		SearchForMissingSpritesInAllScenes();
+	}
+
+	public static void SearchForMissingSpritesInAllScenes(Action<string> reportError = null)
+	{
 		foreach (var scene in EditorBuildSettings.scenes.Where(s => s.enabled))
 		{
 			EditorSceneManager.OpenScene(scene.path);
-			FindMissingReferencesInCurrentScene();
+			var sceneObjects = GetSceneObjects();
+			FindMissingReferences(SceneManager.GetActiveScene().name, sceneObjects, reportError);
 		}
 	}
 
@@ -69,7 +75,7 @@ public class MissingReferencesFinder : MonoBehaviour
 				// Missing components will be null, we can't find their type, etc.
 				if (!c)
 				{
-					reportError("Missing Component in GO: " + GetFullPath(go));
+					reportError("Missing Component in GameObject: [" + context + "]" + GetFullPath(go));
 					continue;
 				}
 

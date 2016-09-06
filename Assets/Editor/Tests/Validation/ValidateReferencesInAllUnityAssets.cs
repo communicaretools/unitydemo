@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using UnityEngine;
 using System;
+using System.Text;
 
 namespace Neighbourhood.Editor.Tests.Validation
 {
@@ -8,7 +9,7 @@ namespace Neighbourhood.Editor.Tests.Validation
 	public class ValidateReferencesInAllUnityAssets
 	{
 		[Test]
-		public void CheckAllAssets()
+		public void CheckAllScenes()
 		{
 			// It sucks, but otherwise is hard to disable running this test
 			// from MonoDevelop
@@ -22,7 +23,12 @@ namespace Neighbourhood.Editor.Tests.Validation
 				return;
 			}
 
-			MissingReferencesFinder.SearchForMissingReferencesInAllAssets(Assert.Fail);
+			var errors = new StringBuilder();
+			MissingReferencesFinder.SearchForMissingSpritesInAllScenes(msg => errors.AppendLine(msg));
+			if (errors.Length > 0)
+			{
+				Assert.Fail(errors.ToString());
+			}
 		}
 	}
 }
