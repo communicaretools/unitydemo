@@ -15,6 +15,7 @@ namespace Neighbourhood.Game.Indoors.Visitables
 		public override void InstallBindings()
 		{
 			Container.BindInstance(settings);
+			Container.Bind<GlowWhenApproachedController>().ToSelf().AsTransient();
 		}
 	}
 }

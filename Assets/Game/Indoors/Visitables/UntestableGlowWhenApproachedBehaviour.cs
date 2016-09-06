@@ -6,7 +6,7 @@ using Neighbourhood.Game.Indoors.ThirdPersonPlayer;
 namespace Neighbourhood.Game.Indoors.Visitables
 {
 	[RequireComponent(typeof(VisitableItemBehaviour))]
-	public class GlowWhenApproachedBehaviour : MonoBehaviour, IDisposable
+	public class UntestableGlowWhenApproachedBehaviour : MonoBehaviour, IDisposable
 	{
 		bool glowing = false;
 		Material originalMaterial;

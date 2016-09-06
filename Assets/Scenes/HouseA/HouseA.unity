@@ -683,7 +683,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 585005268}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc9b986acc89a44e28262e213af97dbd, type: 3}
+  m_Script: {fileID: 11500000, guid: b66ad91251c25418c942b1ec79ff1740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &585005272
@@ -2183,6 +2183,58 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b36dbcc8ef8059c4a9c8f753d6b0350b, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &1794790703 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011110786804, guid: c90de59bff4939e4bbe4cd9324b0decc,
+    type: 2}
+  m_PrefabInternal: {fileID: 755173521}
+--- !u!114 &1794790704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1794790703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b66ad91251c25418c942b1ec79ff1740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1794790705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1794790703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 999ef3d59d64b4486888891958ffd316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1794790706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1794790703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fadd10dff77f340f1a09e1286e8dd916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings:
+    Name: 
+--- !u!65 &1794790707
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1794790703}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.07378243, y: 0.025660813, z: 0.023444124}
+  m_Center: {x: -0.000025294721, y: 0.000804584, z: 0.0022022952}
 --- !u!1001 &1890407022
 Prefab:
   m_ObjectHideFlags: 0
