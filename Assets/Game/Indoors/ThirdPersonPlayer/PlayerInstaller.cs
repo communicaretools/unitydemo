@@ -12,7 +12,6 @@ namespace Neighbourhood.Game.Indoors.ThirdPersonPlayer
 			Container.BindSignal<PlayerArrivedAtDestinationSignal>();
 			Container.BindTrigger<PlayerArrivedAtDestinationSignal.Trigger>();
 
-			Container.BindAllInterfacesAndSelf<UpdatePlayerDestinationFromInput>().To<UpdatePlayerDestinationFromInput>().AsSingle().NonLazy();
 			Container.BindAllInterfacesAndSelf<PlayerMovementController>().To<PlayerMovementController>().AsSingle();
 		}
 	}
