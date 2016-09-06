@@ -5,7 +5,7 @@ using Neighbourhood.Game.FlashMessages;
 using Neighbourhood.Game.Levels;
 using Neighbourhood.Game.Inventory;
 
-namespace Neighbourhood.Editor.Tests.Houses
+namespace Neighbourhood.Editor.Tests.Outdoors.Houses
 {
 
 	[TestFixture]

@@ -2,7 +2,7 @@ using System;
 using NUnit.Framework;
 using Neighbourhood.Game.Outdoors.Houses;
 
-namespace Neighbourhood.Editor.Tests.Houses
+namespace Neighbourhood.Editor.Tests.Outdoors.Houses
 {
 
 	[TestFixture]

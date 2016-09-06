@@ -3,7 +3,7 @@ using Neighbourhood.Game.Outdoors.Houses;
 using Neighbourhood.Game.FlashMessages;
 using Neighbourhood.Game.Levels;
 
-namespace Neighbourhood.Editor.Tests.Houses
+namespace Neighbourhood.Editor.Tests.Outdoors.Houses
 {
 	[TestFixture]
 	public class WhenThePlayerArrivesAtAHouseWithoutTheCorrectKey

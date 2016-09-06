@@ -3,9 +3,8 @@ using Neighbourhood.Game.Indoors.ThirdPersonPlayer;
 using Zenject;
 using Neighbourhood.Editor.Tests.Stubs;
 using Neighbourhood.Editor.Tests.TestExtensions;
-using UnityEngine;
 
-namespace Neighbourhood.Editor.Tests.ThirdPersonPlayer
+namespace Neighbourhood.Editor.Tests.Indoors.ThirdPersonPlayer
 {
 
 	[TestFixture]

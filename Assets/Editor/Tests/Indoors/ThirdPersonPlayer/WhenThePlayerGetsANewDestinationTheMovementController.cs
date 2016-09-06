@@ -5,7 +5,7 @@ using Neighbourhood.Editor.Tests.Stubs;
 using Neighbourhood.Editor.Tests.TestExtensions;
 using UnityEngine;
 
-namespace Neighbourhood.Editor.Tests.ThirdPersonPlayer
+namespace Neighbourhood.Editor.Tests.Indoors.ThirdPersonPlayer
 {
 	[TestFixture]
 	public class WhenThePlayerGetsANewDestinationTheMovementController

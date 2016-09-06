@@ -2,7 +2,7 @@
 using Neighbourhood.Game.Outdoors.FirstPersonPlayer;
 using UnityEngine;
 
-namespace Neighbourhood.Editor.Tests.Player
+namespace Neighbourhood.Editor.Tests.Outdoors.Player
 {
 	[TestFixture]
 	public class WhenPlayerMoveHandlerObservesTheInputState

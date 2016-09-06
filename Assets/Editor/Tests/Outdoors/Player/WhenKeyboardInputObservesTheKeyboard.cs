@@ -2,7 +2,7 @@
 using Neighbourhood.Editor.Tests.Stubs;
 using Neighbourhood.Game.Outdoors.FirstPersonPlayer;
 
-namespace Neighbourhood.Editor.Tests.Player
+namespace Neighbourhood.Editor.Tests.Outdoors.Player
 {
 	[TestFixture]
 	public class WhenKeyboardInputObservesTheKeyboard

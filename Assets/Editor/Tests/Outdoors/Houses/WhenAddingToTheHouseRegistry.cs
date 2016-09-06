@@ -2,7 +2,7 @@
 using Neighbourhood.Game.Outdoors.Houses;
 using System.Linq;
 
-namespace Neighbourhood.Editor.Tests.Houses
+namespace Neighbourhood.Editor.Tests.Outdoors.Houses
 {
 	[TestFixture]
 	public class WhenAddingToTheHouseRegistry
