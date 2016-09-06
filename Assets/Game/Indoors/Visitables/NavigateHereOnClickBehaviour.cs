@@ -11,7 +11,11 @@ namespace Neighbourhood.Game.Indoors.Visitables
 
 		void OnMouseUpAsButton()
 		{
-			ScheduleNavigation.Fire(new PlayerDestinationChangedSignal.Arguments {Destination = GetComponent<IVisitableItem>(), Coordinate = transform.position});
+			ScheduleNavigation.Fire(new PlayerDestinationChangedSignal.Arguments
+				{
+					Destination = GetComponent<VisitableItemBehaviour>(),
+					Coordinate = transform.position
+				});
 		}
 	}
 }

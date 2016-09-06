@@ -10,7 +10,7 @@ namespace Neighbourhood.Game.Indoors.Visitables
 		VisitableItemSettings settings = new VisitableItemSettings();
 
 		#region IVisitableItem implementation
-		public string Name { get { return settings.Name; } }
+		public string Name { get { return string.IsNullOrEmpty(settings.Name) ? gameObject.name : settings.Name; } }
 		#endregion
 
 		[Serializable]

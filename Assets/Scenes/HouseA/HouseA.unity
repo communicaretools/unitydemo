@@ -323,6 +323,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 23000010362705874, guid: 3dcb1df6c82dde44f9dac4ef0ed2b1f4,
+        type: 2}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011797276446, guid: 3dcb1df6c82dde44f9dac4ef0ed2b1f4, type: 2}
       propertyPath: m_LocalPosition.x
       value: -10
@@ -359,6 +364,11 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 23000010362705874, guid: 3dcb1df6c82dde44f9dac4ef0ed2b1f4,
+        type: 2}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 38df50251b714ba4580b6887e3eeaf1a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3dcb1df6c82dde44f9dac4ef0ed2b1f4, type: 2}
   m_IsPrefabParent: 0
@@ -403,6 +413,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings:
     Name: Fridge
+--- !u!114 &316846574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 316846569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc9b986acc89a44e28262e213af97dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &386468767
 Prefab:
   m_ObjectHideFlags: 0
@@ -654,6 +675,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.056233343, y: 0.050758857, z: 0.022627799}
   m_Center: {x: 0.00030491033, y: 0.016448282, z: -0.00028632113}
+--- !u!114 &585005271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 585005268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc9b986acc89a44e28262e213af97dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &585005272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 585005268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fadd10dff77f340f1a09e1286e8dd916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings:
+    Name: Bathtub
 --- !u!1001 &598549176
 Prefab:
   m_ObjectHideFlags: 0
@@ -969,6 +1014,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73852b42bc07b4f96907a7d16a4483ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Settings:
+    Visitable:
+      GlowMaterial: {fileID: 2100000, guid: 29d15ff6ab6164be5ac8f7aa48f68eea, type: 2}
 --- !u!4 &833208766
 Transform:
   m_ObjectHideFlags: 0
@@ -1972,6 +2020,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.072548844, y: 0.04135594, z: 0.06560294}
   m_Center: {x: 0.0000071972627, y: -0.004784014, z: -0.0048734415}
+--- !u!114 &1674487534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1674487531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc9b986acc89a44e28262e213af97dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1674487535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1674487531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fadd10dff77f340f1a09e1286e8dd916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings:
+    Name: Bed
 --- !u!1 &1729444986
 GameObject:
   m_ObjectHideFlags: 0
