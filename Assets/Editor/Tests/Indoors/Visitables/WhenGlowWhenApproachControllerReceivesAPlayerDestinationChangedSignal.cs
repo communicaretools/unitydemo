@@ -17,7 +17,7 @@ namespace Neighbourhood.Editor.Tests.Indoors.Visitables
 		{
 			item = new StubVisitable();
 			approaching = new PlayerDestinationChangedSignal();
-			var controller = new GlowWhenApproachedController(approaching, new PlayerArrivedAtDestinationSignal());
+			var controller = new GlowWhenApproachedController { DestinationChanged = approaching, DestinationReached = new PlayerArrivedAtDestinationSignal() };
 			view = new StubGlowingView(item);
 			controller.InitView(view);
 		}

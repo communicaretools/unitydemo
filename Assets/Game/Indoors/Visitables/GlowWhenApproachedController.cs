@@ -6,22 +6,17 @@ namespace Neighbourhood.Game.Indoors.Visitables
 {
 	public class GlowWhenApproachedController : IDisposable
 	{
-		readonly PlayerDestinationChangedSignal destinationChanged;
-		readonly PlayerArrivedAtDestinationSignal destinationReached;
+		[Inject] public PlayerDestinationChangedSignal DestinationChanged { get; set; }
+		[Inject] public PlayerArrivedAtDestinationSignal DestinationReached { get; set; }
+
 		IGlowWhenApproached view;
 		bool glowing;
-
-		public GlowWhenApproachedController(PlayerDestinationChangedSignal destinationChanged, PlayerArrivedAtDestinationSignal destinationReached)
-		{
-			this.destinationChanged = destinationChanged;
-			this.destinationReached = destinationReached;
-		}
 
 		public void InitView(IGlowWhenApproached view)
 		{
 			this.view = view;
-			destinationChanged.Event += GlowIfApproachingMe;
-			destinationReached.Event += StopGlowing;
+			DestinationChanged.Event += GlowIfApproachingMe;
+			DestinationReached.Event += StopGlowing;
 		}
 
 		void GlowIfApproachingMe(PlayerDestinationChangedSignal.Arguments args)
@@ -53,8 +48,8 @@ namespace Neighbourhood.Game.Indoors.Visitables
 
 		public void Dispose()
 		{
-			destinationChanged.Event -= GlowIfApproachingMe;
-			destinationReached.Event -= StopGlowing;
+			DestinationChanged.Event -= GlowIfApproachingMe;
+			DestinationReached.Event -= StopGlowing;
 		}
 	}
 
