@@ -10,7 +10,7 @@ namespace Neighbourhood.Editor.Tests.ThirdPersonPlayer
 	[TestFixture]
 	public class WhenTheInputComponentRegistersASelection
 	{
-		Vector3 emittedPosition;
+		PlayerDestinationChangedSignal.Arguments emittedEvent;
 
 		[SetUp]
 		public void Given()
@@ -18,8 +18,8 @@ namespace Neighbourhood.Editor.Tests.ThirdPersonPlayer
 			var input = new InputStub();
 			var coordinateUtility = new CoordinateUtilityStub { ScreenToWorldTransform = _ => new Vector3(1f, 2f, 3f) };
 			var trigger = new PlayerDestinationChangedSignal.Trigger();
-			emittedPosition = Vector3.zero;
-			trigger.SetupSignalListenerForTesting<PlayerDestinationChangedSignal, Vector3>(pos => emittedPosition = pos);
+			emittedEvent = null;
+			trigger.SetupSignalListenerForTesting<PlayerDestinationChangedSignal, PlayerDestinationChangedSignal.Arguments>(pos => emittedEvent = pos);
 			var handler = new UpdatePlayerDestinationFromInput(input, coordinateUtility, trigger);
 			input.SelectedPoint = new Vector2(42, 42);
 			handler.Tick();
@@ -28,7 +28,8 @@ namespace Neighbourhood.Editor.Tests.ThirdPersonPlayer
 		[Test]
 		public void TheCorrespondingWorldPositionIsPublishedAsDestinationForThePlayer()
 		{
-			Assert.That(emittedPosition, Is.EqualTo(new Vector3(1f, 2f, 3f)));
+			Assert.That(emittedEvent, Is.Not.Null);
+			Assert.That(emittedEvent.Destination, Is.EqualTo(new Vector3(1f, 2f, 3f)));
 		}
 	}
 }

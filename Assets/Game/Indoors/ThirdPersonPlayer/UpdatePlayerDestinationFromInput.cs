@@ -27,7 +27,7 @@ namespace Neighbourhood.Game.Indoors.ThirdPersonPlayer
 				var worldPoint = coordinateUtility.ScreenPointToWorldPoint(screenPoint);
 				if (worldPoint != Vector3.zero)
 				{
-					trigger.Fire(worldPoint);
+					trigger.Fire(new PlayerDestinationChangedSignal.Arguments {Destination = worldPoint});
 				}
 			}
 		}

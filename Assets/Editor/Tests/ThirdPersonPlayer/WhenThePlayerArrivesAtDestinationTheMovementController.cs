@@ -33,7 +33,7 @@ namespace Neighbourhood.Editor.Tests.ThirdPersonPlayer
 			controller.Init(behaviour);
 
 			behaviour.NavMeshAgent.IsNavigating = false;
-			leavingSignal.SimulateTrigger(new Vector3());
+			leavingSignal.SimulateTrigger(new PlayerDestinationChangedSignal.Arguments());
 			controller.Tick();
 			Assert.That(triggerWasFired, Is.False, "Trigger fired too early, on navigation start rather than end");
 

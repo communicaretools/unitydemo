@@ -28,9 +28,9 @@ namespace Neighbourhood.Game.Indoors.ThirdPersonPlayer
 			animator = behaviour.Animator;
 		}
 
-		void GoTowards(Vector3 destination)
+		void GoTowards(PlayerDestinationChangedSignal.Arguments @event)
 		{
-			navigator.GoTowards(destination);
+			navigator.GoTowards(@event.Destination);
 			animator.SetBool("Walking", true);
 			navigating = NavigationState.Starting;
 		}
