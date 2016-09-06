@@ -32,6 +32,7 @@ namespace Neighbourhood.Editor.Tests.Validation
 			{"OnAnimator", typeof(Animator)},
 			{"OnCollision", typeof(Collider)},
 			{"OnTrigger", typeof(Collider)},
+			{"OnMouse", typeof(Collider)},
 		};
 
 		[Test]
