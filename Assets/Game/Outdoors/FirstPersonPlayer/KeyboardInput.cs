@@ -18,6 +18,11 @@ namespace Neighbourhood.Game.Outdoors.FirstPersonPlayer
 
 		public void Tick()
 		{
+			if (state.Source != InputSource.Input)
+			{
+				return;
+			}
+
 			if (input.GetHorizontal() > 0f)
 			{
 				state.Rotation = RotationDirection.Right;
