@@ -5,13 +5,13 @@ using Zenject;
 namespace Neighbourhood.Game.Outdoors.Houses
 {
 	[RequireComponent(typeof(Collider))]
-	public class HouseBehaviour : MonoBehaviour
+	public class TryToUnlockHouseWhenArrivingBehaviour : MonoBehaviour
 	{
-		HouseController controller;
+		TryToUnlockHouseWhenArrivingController controller;
 		public HouseData House;
 
 		[Inject]
-		public void Init(HouseController controller)
+		public void Init(TryToUnlockHouseWhenArrivingController controller)
 		{
 			this.controller = controller;
 			controller.Initialize(this.House);

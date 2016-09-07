@@ -7,7 +7,7 @@ namespace Neighbourhood.Game.Outdoors.Houses
 	{
 		public override void InstallBindings()
 		{
-			Container.Bind<HouseController>().ToSelf().AsTransient();
+			Container.Bind<TryToUnlockHouseWhenArrivingController>().ToSelf().AsTransient();
 			Container.Bind<HouseRegistry>().ToSelf().AsSingle();
 		}
 	}

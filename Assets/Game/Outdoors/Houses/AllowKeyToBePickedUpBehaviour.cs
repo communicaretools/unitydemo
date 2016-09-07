@@ -6,7 +6,7 @@ using System;
 namespace Neighbourhood.Game.Outdoors.Houses
 {
 	[RequireComponent(typeof(Collider))]
-	public class KeyBehaviour : MonoBehaviour
+	public class AllowKeyToBePickedUpBehaviour : MonoBehaviour
 	{
 		Inventory.Inventory inventory;
 		public Settings KeyInfo;

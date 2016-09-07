@@ -4,7 +4,7 @@ using Neighbourhood.Game.Places;
 
 namespace Neighbourhood.Game.Outdoors.Houses
 {
-	public class HouseController
+	public class TryToUnlockHouseWhenArrivingController
 	{
 		House house;
 		readonly HouseRegistry registry;
@@ -12,7 +12,7 @@ namespace Neighbourhood.Game.Outdoors.Houses
 		readonly ShowMessageCommand showMessage;
 		readonly EnterHouseCommand loadLevel;
 
-		public HouseController(HouseRegistry registry, Inventory.Inventory inventory, ShowMessageCommand showMessage, EnterHouseCommand loadLevel)
+		public TryToUnlockHouseWhenArrivingController(HouseRegistry registry, Inventory.Inventory inventory, ShowMessageCommand showMessage, EnterHouseCommand loadLevel)
 		{
 			this.loadLevel = loadLevel;
 			this.showMessage = showMessage;

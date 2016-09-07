@@ -30,7 +30,7 @@ namespace Neighbourhood.Editor.Tests.Outdoors.Houses
 			requestedLevel = null;
 			loadLevelCommand.Construct(levelName => requestedLevel = levelName);
 
-			var controller = new HouseController(registry, inventory, showMessageCommand, loadLevelCommand);
+			var controller = new TryToUnlockHouseWhenArrivingController(registry, inventory, showMessageCommand, loadLevelCommand);
 			controller.Initialize(new HouseData { RequiredKeyCode = "KEY_GREEN", LoadLevel = "nextLevel" });
 			controller.PlayerArrived();
 		}

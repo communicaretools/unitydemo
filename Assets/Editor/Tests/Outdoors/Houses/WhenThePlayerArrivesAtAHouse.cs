@@ -22,7 +22,7 @@ namespace Neighbourhood.Editor.Tests.Outdoors.Houses
 			var loadLevelCommand = new EnterHouseCommand();
 			loadLevelCommand.Construct(levelName => Assert.Fail("Not supposed to load a level if the player doesn't have the correct key"));
 
-			var controller = new HouseController(registry, inventory, showMessageCommand, loadLevelCommand);
+			var controller = new TryToUnlockHouseWhenArrivingController(registry, inventory, showMessageCommand, loadLevelCommand);
 			controller.Initialize(new HouseData { RequiredKeyCode = "KEY_GREEN" });
 			controller.PlayerArrived();
 		}
