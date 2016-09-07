@@ -3,9 +3,9 @@ using UnityEngine;
 
 namespace Neighbourhood.Game.Indoors.ThirdPersonPlayer
 {
-	public class PlayerArrivedAtDestinationSignal : Signal
+	public class PlayerArrivedAtDestinationSignal : Signal<IPlayerDestination>
 	{
-		public class Trigger : Signal.TriggerBase { }
+		public class Trigger : Signal<IPlayerDestination>.TriggerBase { }
 	}
 }
 

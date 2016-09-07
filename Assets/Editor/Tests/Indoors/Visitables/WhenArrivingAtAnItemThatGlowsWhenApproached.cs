@@ -21,7 +21,7 @@ namespace Neighbourhood.Editor.Tests.Indoors.Visitables
 			controller.InitView(view);
 
 			approaching.SimulateTrigger(new PlayerDestinationChangedSignal.Arguments {Destination = item});
-			arrived.SimulateTrigger();
+			arrived.SimulateTrigger(new StubVisitable());
 		}
 
 		[Test]

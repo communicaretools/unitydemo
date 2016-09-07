@@ -49,7 +49,7 @@ namespace Neighbourhood.Game.Indoors.Visitables
 			glowing = true;
 		}
 
-		void StopGlowing()
+		void StopGlowing(IPlayerDestination destination = null)
 		{
 			Debug.Log("Stop glowing: " + me.Name);
 			glowing = false;

@@ -19,7 +19,7 @@ namespace Neighbourhood.Editor.Tests.Indoors.ThirdPersonPlayer
 			var leavingSignal = new PlayerDestinationChangedSignal();
 			var playerArrivedTrigger = new PlayerArrivedAtDestinationSignal.Trigger();
 			triggerWasFired = false;
-			playerArrivedTrigger.SetupSignalListenerForTesting<PlayerArrivedAtDestinationSignal>(() => triggerWasFired = true);
+			playerArrivedTrigger.SetupSignalListenerForTesting<PlayerArrivedAtDestinationSignal, IPlayerDestination>(dest => triggerWasFired = true);
 			var controller = new PlayerMovementController(leavingSignal, playerArrivedTrigger);
 			((IInitializable)controller).Initialize();
 

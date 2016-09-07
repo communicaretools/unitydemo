@@ -1,7 +1,6 @@
 ﻿using System;
 using Zenject;
 using Neighbourhood.Game.UnityIntegration.Abstractions.Components;
-using UnityEngine;
 
 namespace Neighbourhood.Game.Indoors.ThirdPersonPlayer
 {
@@ -15,6 +14,7 @@ namespace Neighbourhood.Game.Indoors.ThirdPersonPlayer
 		INavMeshAgent navigator;
 		IAnimator animator;
 		NavigationState navigating;
+		IPlayerDestination goingTowards;
 
 		public PlayerMovementController(PlayerDestinationChangedSignal onNewDestination, PlayerArrivedAtDestinationSignal.Trigger arrivalTrigger)
 		{
@@ -33,13 +33,15 @@ namespace Neighbourhood.Game.Indoors.ThirdPersonPlayer
 			navigator.GoTowards(@event.Coordinate);
 			animator.SetBool("Walking", true);
 			navigating = NavigationState.Starting;
+			goingTowards = @event.Destination;
 		}
 
 		void Stop()
 		{
 			animator.SetBool("Walking", false);
-			arrivalTrigger.Fire();
+			arrivalTrigger.Fire(goingTowards);
 			navigating = NavigationState.Idle;
+			goingTowards = null;
 		}
 
 		public void Tick()

@@ -22,7 +22,11 @@ namespace Neighbourhood.Game.Indoors.Visitables
 		public override void Init(IExitHouseView view)
 		{
 			base.Init(view);
-			SubscribeToSignal(PlayerArrived, Exit.Execute);
+			SubscribeToSignal(PlayerArrived,
+				(IPlayerDestination dest) =>
+				{
+					Exit.Execute();
+				});
 		}
 	}
 }
