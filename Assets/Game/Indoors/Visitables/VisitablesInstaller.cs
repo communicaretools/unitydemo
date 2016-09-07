@@ -1,5 +1,6 @@
 ﻿using System;
 using Zenject;
+using Neighbourhood.Game.UnityIntegration;
 
 namespace Neighbourhood.Game.Indoors.Visitables
 {
@@ -16,7 +17,7 @@ namespace Neighbourhood.Game.Indoors.Visitables
 		{
 			Container.BindInstance(settings);
 			Container.Bind<GlowWhenApproachedController>().ToSelf().AsTransient();
-			Container.Bind<ExitHouseOnArrivalController>().ToSelf().AsTransient();
+			Container.Bind(x => x.AllClasses().DerivingFrom<IController>().InNamespace(GetType().Namespace));
 		}
 	}
 }
