@@ -44,14 +44,12 @@ namespace Neighbourhood.Game.Indoors.Visitables
 
 		void StartGlowing()
 		{
-			Debug.Log("Start glowing: " + me.Name);
 			renderer.material = Settings.GlowMaterial;
 			glowing = true;
 		}
 
 		void StopGlowing(IPlayerDestination destination = null)
 		{
-			Debug.Log("Stop glowing: " + me.Name);
 			glowing = false;
 			renderer.material = originalMaterial;
 		}

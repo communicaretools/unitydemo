@@ -27,13 +27,11 @@ namespace Neighbourhood.Game.Indoors.Visitables
 
 		public void Glow()
 		{
-			Debug.Log("Start glowing: " + Item.Name);
 			renderer.material = settings.GlowMaterial;
 		}
 
 		public void StopGlowing()
 		{
-			Debug.Log("Stop glowing: " + Item.Name);
 			renderer.material = originalMaterial;
 		}
 
