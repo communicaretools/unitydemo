@@ -1,9 +1,9 @@
 ﻿using UnityEngine.SceneManagement;
 using UnityEngine;
 
-namespace Neighbourhood.Game.Levels
+namespace Neighbourhood.Game.Places
 {
-	public class LoadLevelHandler
+	public class LoadPlacesHandler
 	{
 		public void Enter(string houseName)
 		{

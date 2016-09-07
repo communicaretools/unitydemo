@@ -2,7 +2,7 @@
 using Neighbourhood.Game.UnityIntegration;
 using Zenject;
 using Neighbourhood.Game.Indoors.ThirdPersonPlayer;
-using Neighbourhood.Game.Levels;
+using Neighbourhood.Game.Places;
 using UnityEngine;
 
 namespace Neighbourhood.Game.Indoors.Visitables

@@ -1,6 +1,6 @@
 ﻿using System;
 using Neighbourhood.Game.FlashMessages;
-using Neighbourhood.Game.Levels;
+using Neighbourhood.Game.Places;
 
 namespace Neighbourhood.Game.Outdoors.Houses
 {

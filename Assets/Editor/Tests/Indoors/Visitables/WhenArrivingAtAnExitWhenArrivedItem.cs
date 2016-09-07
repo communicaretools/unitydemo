@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using Neighbourhood.Game.Indoors.Visitables;
 using Neighbourhood.Game.Indoors.ThirdPersonPlayer;
-using Neighbourhood.Game.Levels;
+using Neighbourhood.Game.Places;
 using Neighbourhood.Editor.Tests.TestExtensions;
 
 namespace Neighbourhood.Editor.Tests.Indoors.Visitables

@@ -2,7 +2,7 @@ using NUnit.Framework;
 using Neighbourhood.Editor.Tests.TestExtensions;
 using Neighbourhood.Game.Outdoors.Houses;
 using Neighbourhood.Game.FlashMessages;
-using Neighbourhood.Game.Levels;
+using Neighbourhood.Game.Places;
 using Neighbourhood.Game.Inventory;
 
 namespace Neighbourhood.Editor.Tests.Outdoors.Houses

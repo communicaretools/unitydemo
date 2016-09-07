@@ -3,7 +3,7 @@ using Zenject;
 using Neighbourhood.Game.UnityIntegration.Implementation;
 using Neighbourhood.Game.Inventory;
 using Neighbourhood.Game.FlashMessages;
-using Neighbourhood.Game.Levels;
+using Neighbourhood.Game.Places;
 
 namespace Neighbourhood.Game
 {
@@ -15,7 +15,7 @@ namespace Neighbourhood.Game
 		{
 			InventoryInstaller.Install(Container, Settings.Inventory);
 			FlashMessagesInstaller.Install(Container, Settings.FlashMessages);
-			LevelInstaller.Install(Container);
+			PlacesInstaller.Install(Container);
 			UnityIntegrationInstaller.Install(Container);
 		}
 

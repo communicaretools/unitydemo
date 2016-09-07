@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using Neighbourhood.Game.Outdoors.Houses;
 using Neighbourhood.Game.FlashMessages;
-using Neighbourhood.Game.Levels;
+using Neighbourhood.Game.Places;
 
 namespace Neighbourhood.Editor.Tests.Outdoors.Houses
 {

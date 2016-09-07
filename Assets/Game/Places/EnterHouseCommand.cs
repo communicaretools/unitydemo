@@ -1,6 +1,6 @@
 ﻿using Zenject;
 
-namespace Neighbourhood.Game.Levels
+namespace Neighbourhood.Game.Places
 {
 	public class EnterHouseCommand : Command<string>
 	{
