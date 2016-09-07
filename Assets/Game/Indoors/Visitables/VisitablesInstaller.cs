@@ -16,6 +16,7 @@ namespace Neighbourhood.Game.Indoors.Visitables
 		{
 			Container.BindInstance(settings);
 			Container.Bind<GlowWhenApproachedController>().ToSelf().AsTransient();
+			Container.Bind<ExitHouseOnArrivalController>().ToSelf().AsTransient();
 		}
 	}
 }
