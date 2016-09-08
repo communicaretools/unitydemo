@@ -3,7 +3,7 @@ using Neighbourhood.Editor.Tests.Stubs;
 
 namespace Neighbourhood.Editor.Tests.Outdoors.Player
 {
-	public class PlayerStub : BaseBehaviourStub, IPlayer
+	public class PlayerStub : BaseBehaviourStub, IMovePlayerView
 	{
 	}
 }

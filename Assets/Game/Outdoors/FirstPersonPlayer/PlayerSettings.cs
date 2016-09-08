@@ -5,7 +5,6 @@ namespace Neighbourhood.Game.Outdoors.FirstPersonPlayer
 	[Serializable]
 	public class PlayerSettings
 	{
-		public MovePlayerBehaviour Player;
 		public Movement MovementSettings;
 		public TouchInputDimensions TouchInputSettings;
 

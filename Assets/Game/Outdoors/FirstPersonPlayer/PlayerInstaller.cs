@@ -16,7 +16,6 @@ namespace Neighbourhood.Game.Outdoors.FirstPersonPlayer
 		{
 			BindSettings();
 
-			Container.Bind<IPlayer>().To<MovePlayerBehaviour>().FromMethod(x => settings.Player);
 			Container.Bind<InputState>().AsSingle();
 			Container.Bind<TouchInput>().ToSelf().FromGameObject().AsSingle().NonLazy();
 			Container.Bind<ITickable>().To<KeyboardInput>().AsSingle();  // must be bound before PlayerMoveHandler

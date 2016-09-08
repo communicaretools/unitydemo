@@ -6,20 +6,25 @@ namespace Neighbourhood.Game.Outdoors.FirstPersonPlayer
 	{
 		readonly InputState state;
 		readonly PlayerSettings.Movement settings;
-		readonly IPlayer player;
+		IMovePlayerView player;
 
 		[Inject]
-		public MovePlayerController(IPlayer player, InputState state, PlayerSettings.Movement settings)
+		public MovePlayerController(InputState state, PlayerSettings.Movement settings)
 		{
-			this.player = player;
 			this.settings = settings;
 			this.state = state;
+		}
+
+		public void Init(IMovePlayerView player)
+		{
+			this.player = player;
 		}
 
 		#region ITickable implementation
 
 		public void Tick()
 		{
+			if (player == null) { return; }
 			if (state.Direction == MovementDirection.Forward)
 			{
 				player.Transform.Position += player.Transform.Forward * settings.ForwardSpeed;

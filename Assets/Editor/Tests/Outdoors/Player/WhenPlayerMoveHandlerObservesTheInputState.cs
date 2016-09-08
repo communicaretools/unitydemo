@@ -20,7 +20,8 @@ namespace Neighbourhood.Editor.Tests.Outdoors.Player
 				ForwardSpeed = 2f,
 				RotationSpeed = 10f
 			};
-			handler = new MovePlayerController(player, input, settings);
+			handler = new MovePlayerController(input, settings);
+			handler.Init(player);
 		}
 
 		[Test]
