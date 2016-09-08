@@ -26,6 +26,4 @@ namespace Neighbourhood.Game.Inventory
 			return items.Where(i => i.Data is T).Select(i => (T)i.Data);
 		}
 	}
-
 }
-

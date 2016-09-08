@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Neighbourhood.Game.Outdoors.FirstPersonPlayer
+﻿namespace Neighbourhood.Game.Outdoors.FirstPersonPlayer
 {
 	public enum MovementDirection
 	{
@@ -29,4 +27,3 @@ namespace Neighbourhood.Game.Outdoors.FirstPersonPlayer
 		public RotationDirection Rotation { get; set; }
 	}
 }
-

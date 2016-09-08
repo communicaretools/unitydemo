@@ -14,10 +14,11 @@ namespace Neighbourhood.Game.Inventory
 
 		public override void InstallBindings()
 		{
-			Container.BindInstance(settings.RendererPositioning);
-			Container.Bind<Inventory>().ToSelf().AsSingle();
 			Container.BindSignal<InventoryItemAddedSignal>();
 			Container.BindTrigger<InventoryItemAddedSignal.Trigger>();
+
+			Container.BindInstance(settings.RendererPositioning);
+			Container.Bind<Inventory>().ToSelf().AsSingle();
 			Container.BindAllInterfaces<ShowMessageOnInventoryItemAdded>().To<ShowMessageOnInventoryItemAdded>().AsSingle();
 			Container.Bind<InventoryRenderer>().ToSelf().FromGameObject().AsSingle().NonLazy();
 		}

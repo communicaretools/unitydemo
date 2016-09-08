@@ -1,14 +1,9 @@
-﻿using Neighbourhood.Game.UnityIntegration.Abstractions.Components;
-using Neighbourhood.Game.UnityIntegration.Implementation;
+﻿using Neighbourhood.Game.UnityIntegration.Implementation;
 using Zenject;
 using UnityEngine;
 
 namespace Neighbourhood.Game.Outdoors.FirstPersonPlayer
 {
-	public interface IMovePlayerView : IHasTransform
-	{
-	}
-
 	public class MovePlayerBehaviour : BaseBehaviour, IMovePlayerView
 	{
 		MovePlayerController controller;

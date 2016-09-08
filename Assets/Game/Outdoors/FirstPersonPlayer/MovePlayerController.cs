@@ -1,7 +1,12 @@
 ﻿using Zenject;
+using Neighbourhood.Game.UnityIntegration.Abstractions.Components;
 
 namespace Neighbourhood.Game.Outdoors.FirstPersonPlayer
 {
+	public interface IMovePlayerView : IHasTransform
+	{
+	}
+
 	public class MovePlayerController
 	{
 		readonly InputState state;
