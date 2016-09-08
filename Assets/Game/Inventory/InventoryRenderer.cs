@@ -25,9 +25,9 @@ namespace Neighbourhood.Game.Inventory
 
 		string FormatInventory()
 		{
-			return !inventory.Items.Any()
-				? "Inventory: None"
-				: string.Format("Inventory: {0}", string.Join(", ", inventory.Items.Select(i => i.Name).ToArray()));
+			return inventory.Items.Any()
+				? string.Format("Inventory: {0}", string.Join(", ", inventory.Items.Select(i => i.Name).ToArray()))
+				: "Inventory: None";
 		}
 
 		[Serializable]
