@@ -62,7 +62,7 @@ Noen drar kanskje kjensel på dette som en ports-and-adapters eller heksagonal a
 
 Nå trengs det gjerne toveis kommunikasjon mellom kjernekoden og den koden som viser noe - hvordan ellers skal vi kunne vise resultatene av det kjernen kommer frem til? Måten å gjøre dette på er en instans av Inversion of Control: I stedet for å depend'e direkte på en `MonoBehaviour` lager vi et interface innenfor kjernen, og så lar vi en klasse utenfor boundary'en implementere. Dette interfacet er der for testbarhet og ensretting av avhengigheter.
 
-![](img/interaction-pattern.jpg)
+![](img/interaction-multiplied.jpg)
 
 Dette mønsteret kan vi så gjenta flere ganger, og det virker for andre sammenhenger enn `MonoBehaviour` også, for eksempel for å bruke GUI- eller I/O-funksjonaliteten i Unity. Tilstanden kan vi holde orden på i en normal domenemodell, og siden spillprogrammering er temmelig hendelsesstyrt, er det fornuftig å dra inn et opplegg for å kommunisere nettopp gjennom hendelser (heller enn felles tilstand).
 
