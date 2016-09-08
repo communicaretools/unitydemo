@@ -48,8 +48,10 @@ namespace Neighbourhood.Game.Indoors.Visitables
 
 		public void Dispose()
 		{
-			DestinationChanged.Event -= GlowIfApproachingMe;
-			DestinationReached.Event -= StopGlowing;
+			if (DestinationChanged != null) { DestinationChanged.Event -= GlowIfApproachingMe; }
+			if (DestinationReached != null) { DestinationReached.Event -= StopGlowing; }
+			DestinationChanged = null;
+			DestinationReached = null;
 		}
 	}
 

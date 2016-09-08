@@ -9,12 +9,14 @@ namespace Neighbourhood.Game.Indoors.Visitables
 		VisitableGlobalSettings settings;
 		new Renderer renderer;
 		Material originalMaterial;
+		GlowWhenApproachedController controller;
 
 		public IVisitableItem Item { get; private set; }
 
 		[Inject]
 		public void Init(GlowWhenApproachedController controller, VisitableGlobalSettings settings)
 		{
+			this.controller = controller;
 			this.settings = settings;
 			this.renderer = GetComponent<Renderer>();
 			this.originalMaterial = renderer.material;
@@ -36,6 +38,11 @@ namespace Neighbourhood.Game.Indoors.Visitables
 		}
 
 		#endregion
+
+		void OnDestroy()
+		{
+			controller.Dispose();
+		}
 	}
 }
 
