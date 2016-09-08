@@ -19,11 +19,12 @@ namespace Neighbourhood.Game.Outdoors.FirstPersonPlayer
 			Container.Bind<InputState>().AsSingle();
 			Container.Bind<TouchInput>().ToSelf().FromGameObject().AsSingle().NonLazy();
 			Container.Bind<ITickable>().To<KeyboardInput>().AsSingle();  // must be bound before PlayerMoveHandler
-			Container.Bind<ITickable>().To<MovePlayerController>().AsSingle();
+			Container.Bind<MovePlayerController>().ToSelf().AsTransient();
 		}
 
 		void BindSettings()
 		{
+			// these two lines are equivalent
 			Container.Bind<PlayerSettings.Movement>().ToSelf().FromInstance(settings.MovementSettings);
 			Container.BindInstance(settings.TouchInputSettings);
 		}

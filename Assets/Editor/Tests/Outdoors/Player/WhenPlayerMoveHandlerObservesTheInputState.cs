@@ -29,7 +29,7 @@ namespace Neighbourhood.Editor.Tests.Outdoors.Player
 		{
 			input.Direction = MovementDirection.Still;
 			input.Rotation = RotationDirection.None;
-			handler.Tick();
+			handler.Update(1f);
 			Assert.That(player.Transform.Position, Is.EqualTo(new Vector3()));
 			Assert.That(player.Transform.Rotation, Is.EqualTo(new Vector3()));
 		}
@@ -38,7 +38,7 @@ namespace Neighbourhood.Editor.Tests.Outdoors.Player
 		public void ForwardMovementMovesThePlayerForward()
 		{
 			input.Direction = MovementDirection.Forward;
-			handler.Tick();
+			handler.Update(1f);
 			Assert.That(player.Transform.Position, Is.EqualTo(2 * player.Transform.Forward));
 		}
 
@@ -46,7 +46,7 @@ namespace Neighbourhood.Editor.Tests.Outdoors.Player
 		public void BackwardsMovementMovesThePlayerBackwards()
 		{
 			input.Direction = MovementDirection.Backward;
-			handler.Tick();
+			handler.Update(1f);
 			Assert.That(player.Transform.Position, Is.EqualTo(2 * -player.Transform.Forward));
 		}
 
@@ -54,7 +54,7 @@ namespace Neighbourhood.Editor.Tests.Outdoors.Player
 		public void RightRotationRotatesPlayerTowardsTheRight()
 		{
 			input.Rotation = RotationDirection.Right;
-			handler.Tick();
+			handler.Update(1f);
 			Assert.That(player.Transform.Rotation.y, Is.EqualTo(10f));
 		}
 
@@ -62,7 +62,7 @@ namespace Neighbourhood.Editor.Tests.Outdoors.Player
 		public void LeftRotationRotatesPlayerTowardsTheLeft()
 		{
 			input.Rotation = RotationDirection.Left;
-			handler.Tick();
+			handler.Update(1f);
 			Assert.That(player.Transform.Rotation.y, Is.EqualTo(-10f));
 		}
 	}
