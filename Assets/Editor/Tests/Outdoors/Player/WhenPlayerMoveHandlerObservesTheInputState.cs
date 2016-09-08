@@ -9,7 +9,7 @@ namespace Neighbourhood.Editor.Tests.Outdoors.Player
 	{
 		PlayerStub player;
 		InputState input;
-		PlayerMoveHandler handler;
+		MovePlayerController handler;
 
 		[SetUp]
 		public void Given()
@@ -20,7 +20,7 @@ namespace Neighbourhood.Editor.Tests.Outdoors.Player
 				ForwardSpeed = 2f,
 				RotationSpeed = 10f
 			};
-			handler = new PlayerMoveHandler(player, input, settings);
+			handler = new MovePlayerController(player, input, settings);
 		}
 
 		[Test]

@@ -7,7 +7,7 @@ namespace Neighbourhood.Game.Outdoors.FirstPersonPlayer
 	{
 	}
 
-	public class PlayerBehaviour : BaseBehaviour, IPlayer
+	public class MovePlayerBehaviour : BaseBehaviour, IPlayer
 	{
 	}
 }

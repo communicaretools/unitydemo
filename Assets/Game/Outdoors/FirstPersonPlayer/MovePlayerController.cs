@@ -2,14 +2,14 @@
 
 namespace Neighbourhood.Game.Outdoors.FirstPersonPlayer
 {
-	public class PlayerMoveHandler : ITickable
+	public class MovePlayerController : ITickable
 	{
 		readonly InputState state;
 		readonly PlayerSettings.Movement settings;
 		readonly IPlayer player;
 
 		[Inject]
-		public PlayerMoveHandler(IPlayer player, InputState state, PlayerSettings.Movement settings)
+		public MovePlayerController(IPlayer player, InputState state, PlayerSettings.Movement settings)
 		{
 			this.player = player;
 			this.settings = settings;
