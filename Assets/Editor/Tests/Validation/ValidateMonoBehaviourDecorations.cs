@@ -20,7 +20,7 @@ namespace Neighbourhood.Editor.Tests.Validation
 		{
 			{typeof(IHasRigidbody), typeof(Rigidbody)},
 			{typeof(IHasAnimator), typeof(Animator)},
-			{typeof(IHasNavMeshAgent), typeof(UnityEngine.AI.NavMeshAgent)}
+			{typeof(IHasNavMeshAgent), typeof(NavMeshAgent)}
 		};
 		/// <summary>
 		/// Relationships between certain message handlers and Unity Components:

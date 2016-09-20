@@ -34,7 +34,10 @@ namespace Neighbourhood.Game.UnityIntegration.Implementation
 
 		void OnDestroy()
 		{
-			Controller.Dispose();
+			if (Controller != null)
+			{
+				Controller.Dispose();
+			}
 		}
 	}
 }

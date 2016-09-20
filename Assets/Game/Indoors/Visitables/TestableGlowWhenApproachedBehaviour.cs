@@ -41,7 +41,10 @@ namespace Neighbourhood.Game.Indoors.Visitables
 
 		void OnDestroy()
 		{
-			controller.Dispose();
+			if (controller != null)
+			{
+				controller.Dispose();
+			}
 		}
 	}
 }

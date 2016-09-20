@@ -89,7 +89,7 @@ if (Input.GetMouseButton(1)){
     	localTarget =  target;
     }
     
-    lookPos = localTarget.position;
+    var lookPos = localTarget.position;
     lookPos.x = 0;
     
     this.transform.LookAt(localTarget.position , Vector3.up);

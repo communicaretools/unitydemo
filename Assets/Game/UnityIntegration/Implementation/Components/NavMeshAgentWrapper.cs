@@ -5,9 +5,9 @@ namespace Neighbourhood.Game.UnityIntegration.Implementation.Components
 {
 	public class NavMeshAgentWrapper : INavMeshAgent
 	{
-		readonly UnityEngine.AI.NavMeshAgent wrapped;
+		readonly NavMeshAgent wrapped;
 
-		public NavMeshAgentWrapper(UnityEngine.AI.NavMeshAgent wrapped)
+		public NavMeshAgentWrapper(NavMeshAgent wrapped)
 		{
 			this.wrapped = wrapped;
 		}
